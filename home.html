@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Robyn's Studio</title>
+        <link rel="stylesheet" href="home.css"/>
+        <style>
+         
+            /* The popup form - hidden by default */
+            .formp {
+              display: none;
+              position: fixed;
+              top: 248px;
+              bottom: 0;
+              left: 630px;
+              width: 40%;
+              height: 400px;
+              background-color:black;
+              opacity: 0.8;
+              z-index: 9;
+            }
+
+            /* Add styles to the form container */
+            .formc {
+              width: 93%;
+              padding: 10px;
+              margin-top: 20px;
+              margin-left: 20px;
+              background-color: white;
+              
+            }
+            
+            /* Full-width input fields */
+            .formc input[type=text], .formc input[type=password] {
+              width: 100%;
+              padding: 15px;
+              margin: 5px 0 22px 0;
+              border: none;
+              background: #f1f1f1;
+            }
+            
+            /* When the inputs get focus, do something */
+            .formc input[type=text]:focus, .formc input[type=password]:focus {
+              background-color: #ddd;
+              outline: none;
+            }
+            
+            /* Set a style for the submit/login button */
+            .formc .btn {
+              background-color: black;
+              color: white;
+              padding: 16px 20px;
+              border: none;
+              cursor: pointer;
+              width: 100%;
+              letter-spacing: 2px;
+              margin-bottom:10px;
+              opacity: 0.8;
+            }
+            
+            /* Add a red background color to the cancel button */
+            .formc .cancel {
+              background: none;
+              color: black;
+              margin-top: -81%;
+              width: 50px;
+              height: 50px;
+              margin-left: 85%;
+            }
+            
+            /* Add some hover effects to buttons */
+            .formc .btn:hover {
+              opacity: 1;
+            }
+            </style>
+    </head>
+    <body>
+        <section id="stu">
+          <div class="navbar">
+            <a href="home.html">Home</a>
+            <a href="Galleria.html">Galleria</a>
+            <a href="Services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="Contact.html">Contact</a>
+            <a href="#name6"  onclick="openForm()">Log In</a>
+            <p class="name">MICHAEL ROBYN</p>
+          </div>
+          <div class="img">
+          </div>
+          <div class="nam">
+              <p class="mr">Michael Robyn</p>
+              <p class="ms">Make Up Studio</p>
+              <a href="Services.html">Book Now</a>
+              <hr class="solid"><br><br>
+          </div>
+          <div class="formp" id="myForm">
+            <form action="/action_page.php" class="formc">
+              <h1>Login</h1>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <button type="submit" class="btn">Login</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">✕</button>
+            </form>
+          </div>
+          
+          <script>
+          
+          function openForm() {
+            document.getElementById("myForm").style.display = "block";
+          }
+          
+          function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+          }
+          </script>
+          <p class="copy">
+                © 2023 by Michael Manuel. Proudly created by Robyn<br><br><br><br>
+            </p>
+        </section>
+    </body>
+</html>
